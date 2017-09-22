@@ -1,3 +1,4 @@
+Training Dates: September 14-15, 21-22
 This is a text file
 This is my Ruby project documentation
 Project was produced by Tim Short
