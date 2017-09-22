@@ -1,0 +1,21 @@
+#Each feature file describes one business requirement
+Feature: The login application
+  As a user on our website
+  I want to login to the application
+  So that I can view account information
+
+  #Describe a specific situation to test the feature
+  Scenario: The user should be able to login with good credentials # features/login.feature:8
+    Given the user is on the login page                            # features/step-definitions/login_test.rb:10
+    When the user enters email and password                        # features/step-definitions/login_test.rb:15
+    Then the user should see the dashboard                         # features/step-definitions/login_test.rb:22
+      expected to find text "success" in "Login or Create an Account New Here? Sign up for a free account Faster one-click checkout Save multiple shipping address View and track orders CREATE ACCOUNT Already Registered? Login Your email address Password Forgot password? Invalid user name, try again! © 2017 SDET Training & SDET University | Training Partners. All Projects, Demos, and Creative Content is Copyright-Protected and Not Available for Public Use" (RSpec::Expectations::ExpectationNotMetError)
+      ./features/step-definitions/login_test.rb:23:in `/^the user should see the dashboard$/'
+      features/login.feature:11:in `Then the user should see the dashboard'
+
+Failing Scenarios:
+cucumber features/login.feature:8 # Scenario: The user should be able to login with good credentials
+
+1 scenario (1 failed)
+3 steps (1 failed, 2 passed)
+0m7.174s

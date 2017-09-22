@@ -1,0 +1,55 @@
+#Each feature file describes one business requirement
+Feature: The login application
+  As a user on our website
+  I want to login to the application
+  So that I can view account information
+
+  #Describe a specific situation to test the feature
+  Scenario: The user should be able to login with good credentials # features/login.feature:8
+    Given the user is on the login page                            # features/step-definitions/login_test.rb:9
+    When the user enters email and password                        # features/step-definitions/login_test.rb:13
+    Then the user should see the dashboard                         # features/step-definitions/login_test.rb:19
+      expected Login or Create an Account
+      New Here?
+      Sign up for a free account
+      Faster one-click checkout
+      Save multiple shipping address
+      View and track orders
+      CREATE ACCOUNT
+      Already Registered? Login
+      Your email address
+      Password
+      Forgot password?
+      
+      © 2017 SDET Training & SDET University | Training Partners.
+      All Projects, Demos, and Creative Content is Copyright-Protected and Not Available for Public Use to respond to `has_content?` (RSpec::Expectations::ExpectationNotMetError)
+      ./features/step-definitions/login_test.rb:20:in `/^the user should see the dashboard$/'
+      features/login.feature:11:in `Then the user should see the dashboard'
+
+  Scenario: The user should not be able to login with bad credentials # features/login.feature:13
+    Given the user is on the login page                               # features/step-definitions/login_test.rb:9
+    When the user enters email                                        # features/login.feature:15
+    And the user enters password                                      # features/login.feature:16
+    Then the user should see a failed message                         # features/login.feature:17
+
+Failing Scenarios:
+cucumber features/login.feature:8 # Scenario: The user should be able to login with good credentials
+
+2 scenarios (1 failed, 1 undefined)
+7 steps (1 failed, 3 undefined, 3 passed)
+0m8.711s
+
+You can implement step definitions for undefined steps with these snippets:
+
+When(/^the user enters email$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When(/^the user enters password$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^the user should see a failed message$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
