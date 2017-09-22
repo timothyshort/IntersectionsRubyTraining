@@ -1,0 +1,4 @@
+Here is some information
+Here is some text
+This is TrainingRite Ruby course
+We will be automated tests shortly
