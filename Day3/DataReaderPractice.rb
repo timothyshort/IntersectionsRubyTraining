@@ -43,10 +43,10 @@ end
 
 def read_db
   #1. Database credentials
-  server = "sql2k801.discountasp.net"
-  username = "SQL2008_841902_tr_user"
-  password = "52645264hrm"
-  database = "SQL2008_841902_tr"
+  server = ""
+  username = ""
+  password = ""
+  database = ""
 
   #2. Connect to the database
   client = TinyTds::Client.new username: username, password: password, dataserver: server, database: database
